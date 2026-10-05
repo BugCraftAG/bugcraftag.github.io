@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="de-AT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>David Tomoiaga – Portfolio · david@htl-brk</title>
+  <meta name="description" content="Portfolio von David Tomoiaga, Schüler der i:HTL Bad Radkersburg (Elektrotechnik – IT, Automation & Energie). Websites für kleine Betriebe in der Südsteiermark.">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0b0e14">
+  <meta property="og:title" content="David Tomoiaga – Portfolio">
+  <meta property="og:description" content="Ein Arch-Linux-Desktop im Browser: Terminal, Projekte, Oszilloskop und SPS-Labor.">
+  <meta property="og:image" content="https://bugcraftag.github.io/images/og.png">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="data/portfolio.json" as="fetch" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="dist/src/main.js"></script>
+</head>
+<body>
+  <a class="skip" href="#ws-1-content">Zum Inhalt springen</a>
+
+  <!-- ================= Boot ================= -->
+  <div class="boot" data-boot aria-hidden="true">
+    <div class="boot-log" data-log></div>
+    <p class="boot-hint">Taste drücken zum Überspringen</p>
+  </div>
+
+  <canvas class="wallpaper" data-wallpaper aria-hidden="true"></canvas>
+
+  <!-- ================= Waybar ================= -->
+  <header class="bar" role="banner">
+    <div class="bar-left">
+      <button class="bar-logo" type="button" data-open-launcher aria-label="Launcher öffnen (Alt+D)" title="Launcher (Alt+D)">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 2 5 13.5h6L9.5 22 19 9.5h-6.2L13.5 2z"/></svg>
+      </button>
+      <nav class="workspaces" aria-label="Arbeitsflächen">
+        <button type="button" data-goto="1" title="Alt+1"><b>1</b><span>~</span></button>
+        <button type="button" data-goto="2" title="Alt+2"><b>2</b><span>projekte</span></button>
+        <button type="button" data-goto="3" title="Alt+3"><b>3</b><span>über mich</span></button>
+        <button type="button" data-goto="4" title="Alt+4"><b>4</b><span>labor</span></button>
+        <button type="button" data-goto="5" title="Alt+5"><b>5</b><span>kontakt</span></button>
+      </nav>
+    </div>
+    <p class="bar-title" data-bar-title aria-live="polite"></p>
+    <div class="bar-right">
+      <button class="mod mod-music" type="button" data-bar-music aria-pressed="false" title="Musik abspielen/pausieren">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 12.5V3l7-1.5V11"/><circle cx="4.5" cy="12.5" r="1.8"/><circle cx="11.5" cy="11" r="1.8"/></svg><span>Musik</span>
+      </button>
+      <span class="mod mod-volt" title="Netzspannung in Österreich">⚡ 230 V~ 50 Hz</span>
+      <span class="mod" data-bar-sun title="Sonnenhöhe über Bad Radkersburg"></span>
+      <time class="mod mod-clock" data-clock></time>
+    </div>
+  </header>
+
+  <main class="desktop" data-desktop>
+
+    <!-- ================= 1 · ~ ================= -->
+    <section class="ws" data-ws="1" data-ratios="0.57,0.5" aria-labelledby="ws1-h" id="ws-1-content">
+      <h2 class="ws-h" id="ws1-h"><b>1</b> ~</h2>
+
+      <article class="win" data-win="terminal" data-title="kitty — ~" aria-label="Terminal" data-terminal>
+        <header class="win-bar"><span class="win-title">kitty — ~</span><span class="win-btns"><button type="button" data-full aria-pressed="false" aria-label="Vollbild"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1 4V1h3M8 1h3v3M11 8v3H8M4 11H1V8"/></svg></button><button type="button" data-close aria-label="Fenster schließen"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 2l8 8M10 2l-8 8"/></svg></button></span></header>
+        <div class="win-body term-body">
+          <div class="term-out" data-out aria-live="polite"></div>
+          <div class="term-line">
+            <label for="term-in" class="prompt" data-prompt><span class="c-accent">david</span><span class="c-muted">@</span><span class="c-accent">htl-brk</span> <span class="c-copper">~</span> <span class="c-green">❯</span></label>
+            <input id="term-in" data-in type="text" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="send" aria-label="Befehl eingeben, help zeigt alle Befehle">
+          </div>
+        </div>
+      </article>
+
+      <article class="win" data-win="files" data-title="yazi — ~/projekte" aria-label="Projekte">
+        <header class="win-bar"><span class="win-title">yazi — ~/projekte</span><span class="win-btns"><button type="button" data-full aria-pressed="false" aria-label="Vollbild"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1 4V1h3M8 1h3v3M11 8v3H8M4 11H1V8"/></svg></button><button type="button" data-close aria-label="Fenster schließen"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 2l8 8M10 2l-8 8"/></svg></button></span></header>
+        <div class="win-body files">
+          <ul class="file-list" data-files aria-label="Projektordner"></ul>
+          <div class="file-preview" data-file-preview></div>
+        </div>
+      </article>
+
+      <article class="win" data-win="player" data-title="ncmpcpp — Oszilloskop" aria-label="Musik und Oszilloskop" data-player>
+        <header class="win-bar"><span class="win-title">ncmpcpp — Oszilloskop</span><span class="win-btns"><button type="button" data-full aria-pressed="false" aria-label="Vollbild"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1 4V1h3M8 1h3v3M11 8v3H8M4 11H1V8"/></svg></button><button type="button" data-close aria-label="Fenster schließen"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 2l8 8M10 2l-8 8"/></svg></button></span></header>
+        <div class="win-body player">
+          <div class="np">
+            <div class="cover"><img data-cover alt="" width="300" height="300"><span aria-hidden="true">♪</span></div>
+            <div class="np-meta">
+              <p class="np-title">Meant To Be</p>
+              <p class="np-artist">Cuntsniffer &amp; Broken Toy Airplanes · 2025</p>
+              <div class="np-controls">
+                <button class="play" type="button" data-play aria-pressed="false" aria-label="Abspielen">
+                  <svg class="i-play" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z"/></svg>
+                  <svg class="i-pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5h3v11H4zM9 2.5h3v11H9z"/></svg>
+                </button>
+                <input class="seek" type="range" min="0" max="1000" value="0" data-seek aria-label="Position">
+                <span class="np-time" data-time>0:00 / 0:30</span>
+              </div>
+            </div>
+          </div>
+          <div class="scope">
+            <canvas data-scope aria-label="Oszilloskop: zeigt die Netzspannung oder das Musiksignal" role="img"></canvas>
+            <div class="scope-hud">
+              <span class="scope-scale" data-scale></span>
+              <span class="scope-tools">
+                <button type="button" data-mode title="Darstellung umschalten">Y-T</button>
+                <label class="vol"><span class="sr-only">Lautstärke</span><input type="range" min="0" max="1" step="0.05" value="0.7" data-volume aria-label="Lautstärke"></label>
+              </span>
+            </div>
+          </div>
+          <p class="np-status"><span data-status></span> <a href="https://music.apple.com/at/album/1860539880?i=1860539881" target="_blank" rel="noopener">Apple Music ↗</a></p>
+        </div>
+      </article>
+    </section>
+
+    <!-- ================= 2 · projekte ================= -->
+    <section class="ws" data-ws="2" data-ratios="0.5,0.5" aria-labelledby="ws2-h">
+      <h2 class="ws-h" id="ws2-h"><b>2</b> projekte</h2>
+      <article class="win win-browser" data-win="proj-0" data-project="0" data-title="firefox" aria-label="Projekt 1">
+        <header class="win-bar"><span class="win-title">firefox</span><span class="win-btns"><button type="button" data-full aria-pressed="false" aria-label="Vollbild"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1 4V1h3M8 1h3v3M11 8v3H8M4 11H1V8"/></svg></button><button type="button" data-close aria-label="Fenster schließen"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 2l8 8M10 2l-8 8"/></svg></button></span></header>
+        <div class="win-body"></div>
+      </article>
+      <article class="win win-browser" data-win="proj-1" data-project="1" data-title="firefox" aria-label="Projekt 2">
+        <header class="win-bar"><span class="win-title">firefox</span><span class="win-btns"><button type="button" data-full aria-pressed="false" aria-label="Vollbild"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1 4V1h3M8 1h3v3M11 8v3H8M4 11H1V8"/></svg></button><button type="button" data-close aria-label="Fenster schließen"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 2l8 8M10 2l-8 8"/></svg></button></span></header>
+        <div class="win-body"></div>
+      </article>
+      <article class="win win-browser" data-win="proj-2" data-project="2" data-title="firefox" aria-label="Projekt 3">
+        <header class="win-bar"><span class="win-title">firefox</span><span class="win-btns"><button type="button" data-full aria-pressed="false" aria-label="Vollbild"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1 4V1h3M8 1h3v3M11 8v3H8M4 11H1V8"/></svg></button><button type="button" data-close aria-label="Fenster schließen"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 2l8 8M10 2l-8 8"/></svg></button></span></header>
+        <div class="win-body"></div>
+      </article>
+    </section>
+
+    <!-- ================= 3 · über mich ================= -->
+    <section class="ws" data-ws="3" data-ratios="0.46,0.55" aria-labelledby="ws3-h">
+      <h2 class="ws-h" id="ws3-h"><b>3</b> über mich</h2>
+      <article class="win" data-win="about" data-title="glow — about.md" aria-label="Über mich">
+        <header class="win-bar"><span class="win-title">glow — about.md</span><span class="win-btns"><button type="button" data-full aria-pressed="false" aria-label="Vollbild"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1 4V1h3M8 1h3v3M11 8v3H8M4 11H1V8"/></svg></button><button type="button" data-close aria-label="Fenster schließen"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 2l8 8M10 2l-8 8"/></svg></button></span></header>
+        <div class="win-body md">
+          <p class="md-h1"># David Tomoiaga</p>
+          <p class="md-lead">Ich gehe auf die <strong>i:HTL Bad Radkersburg</strong> – Elektrotechnik mit Schwerpunkt IT, Automation und Energie. Nebenbei baue ich Websites für kleine Betriebe in der Südsteiermark: schnell, ohne Baukasten, und so, dass die Inhaber sie selbst verstehen.</p>
+          <p class="md-h2">## Warum Elektrotechnik und Web?</p>
+          <p>In der Schule lerne ich, wie eine SPS eine Anlage steuert und warum ein FI-Schalter bei 30&nbsp;mA auslöst. Beim Programmieren denke ich genauso: erst verstehen, wie es funktioniert, dann bauen. Diese Seite ist der Beweis – das Labor auf Arbeitsfläche&nbsp;4 rechnet echt.</p>
+          <p class="md-h2">## Sprachen</p>
+          <ul class="md-list" data-languages></ul>
+          <p class="md-h2">## Außerhalb vom Bildschirm</p>
+          <p>Fitnessstudio, Elektronik basteln, Freunden beim Design helfen.</p>
+          <p class="md-h2">## Wie diese Seite gebaut ist</p>
+          <ul class="md-list">
+            <li>TypeScript im <b>strict</b>-Modus, kein Framework, keine Laufzeit-Abhängigkeiten</li>
+            <li>Fenster werden wie in Hyprland gekachelt (Dwindle-Layout)</li>
+            <li>Die Leiterplatte im Hintergrund wird prozedural erzeugt – Bahnen knicken nur in 45°</li>
+            <li>SPS, Ohm, Farbcode und Sonnenstand rechnen echt – 21 automatische Tests prüfen das</li>
+            <li>Alle Inhalte kommen aus einer einzigen JSON-Datei</li>
+          </ul>
+          <p class="c-muted small">Tastatur: Alt+1 … Alt+5 Arbeitsflächen · Alt+D Launcher · Alt+F Vollbild · Alt+Q Fenster schließen</p>
+        </div>
+      </article>
+      <article class="win" data-win="skills" data-title="btop — skills" aria-label="Fähigkeiten">
+        <header class="win-bar"><span class="win-title">btop — skills</span><span class="win-btns"><button type="button" data-full aria-pressed="false" aria-label="Vollbild"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1 4V1h3M8 1h3v3M11 8v3H8M4 11H1V8"/></svg></button><button type="button" data-close aria-label="Fenster schließen"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 2l8 8M10 2l-8 8"/></svg></button></span></header>
+        <div class="win-body btop" data-skills></div>
+      </article>
+      <article class="win" data-win="cv" data-title="glow — lebenslauf.md" aria-label="Lebenslauf">
+        <header class="win-bar"><span class="win-title">glow — lebenslauf.md</span><span class="win-btns"><button type="button" data-full aria-pressed="false" aria-label="Vollbild"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1 4V1h3M8 1h3v3M11 8v3H8M4 11H1V8"/></svg></button><button type="button" data-close aria-label="Fenster schließen"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 2l8 8M10 2l-8 8"/></svg></button></span></header>
+        <div class="win-body md">
+          <p class="md-h1"># Lebenslauf</p>
+          <ol class="timeline" data-timeline></ol>
+        </div>
+      </article>
+    </section>
+
+    <!-- ================= 4 · labor ================= -->
+    <section class="ws" data-ws="4" data-ratios="0.56,0.5,0.5" aria-labelledby="ws4-h">
+      <h2 class="ws-h" id="ws4-h"><b>4</b> labor</h2>
+
+      <article class="win lab-sps" data-win="sps" data-title="sps — Selbsthaltung (KOP)" aria-label="SPS-Simulation: Motor mit Selbsthaltung" data-lab="sps">
+        <header class="win-bar"><span class="win-title">sps — Selbsthaltung (KOP)</span><span class="win-btns"><button type="button" data-full aria-pressed="false" aria-label="Vollbild"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1 4V1h3M8 1h3v3M11 8v3H8M4 11H1V8"/></svg></button><button type="button" data-close aria-label="Fenster schließen"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 2l8 8M10 2l-8 8"/></svg></button></span></header>
+        <div class="win-body sps">
+          <svg class="ladder" viewBox="0 0 430 296" role="img" aria-label="Kontaktplan: Netzwerk 1 Motor K1 mit Selbsthaltung, Netzwerk 2 Meldeleuchte Betrieb, Netzwerk 3 Meldeleuchte Bereit">
+            <g class="rail"><path d="M18 22V286M412 22V286"/></g>
+            <text class="nw" x="24" y="16">NW1 · Motor K1 mit Selbsthaltung</text>
+            <path class="wire" data-wire="a" d="M18 58H72"/>
+            <g class="contact" data-addr="I0.0" data-kind="NC" transform="translate(72 58)"><path d="M0 0H8M8 -12V12M24 -12V12M24 0H32M4 12 28 -12"/><text x="16" y="-18">S0</text><text class="addr" x="16" y="26">I0.0</text></g>
+            <path class="wire" data-wire="b" d="M104 58H140"/>
+            <path class="wire" data-wire="s1" d="M140 58H168M200 58H232"/>
+            <g class="contact" data-addr="I0.1" data-kind="NO" transform="translate(168 58)"><path d="M0 0H8M8 -12V12M24 -12V12M24 0H32"/><text x="16" y="-18">S1</text><text class="addr" x="16" y="26">I0.1</text></g>
+            <path class="wire" data-wire="k1" d="M140 58V112H168M200 112H232V58"/>
+            <g class="contact" data-addr="Q0.0" data-kind="NO" transform="translate(168 112)"><path d="M0 0H8M8 -12V12M24 -12V12M24 0H32"/><text x="16" y="26">K1 <tspan class="addr">Q0.0</tspan></text></g>
+            <path class="wire" data-wire="c" d="M232 58H336M380 58H412"/>
+            <g class="coil" data-addr="Q0.0" data-kind="coil" transform="translate(336 58)"><path d="M0 0H6M38 0H44"/><path d="M12 -12A14 14 0 0 0 12 12M32 -12A14 14 0 0 1 32 12"/><text x="22" y="-18">K1</text><text class="addr" x="22" y="26">Q0.0</text></g>
+
+            <text class="nw" x="24" y="160">NW2 · Meldeleuchte Betrieb</text>
+            <path class="wire is-live" d="M18 192H72"/>
+            <g class="contact" data-addr="Q0.0" data-kind="NO" transform="translate(72 192)"><path d="M0 0H8M8 -12V12M24 -12V12M24 0H32"/><text x="16" y="-18">K1</text><text class="addr" x="16" y="26">Q0.0</text></g>
+            <path class="wire" data-wire="r2" d="M104 192H336M380 192H412"/>
+            <g class="coil" data-addr="Q0.1" data-kind="coil" transform="translate(336 192)"><path d="M0 0H6M38 0H44"/><path d="M12 -12A14 14 0 0 0 12 12M32 -12A14 14 0 0 1 32 12"/><text x="22" y="-18">H1</text><text class="addr" x="22" y="26">Q0.1</text></g>
+
+            <text class="nw" x="24" y="238">NW3 · Meldeleuchte Bereit</text>
+            <path class="wire is-live" d="M18 268H72"/>
+            <g class="contact" data-addr="Q0.0" data-kind="NC" transform="translate(72 268)"><path d="M0 0H8M8 -12V12M24 -12V12M24 0H32M4 12 28 -12"/><text class="addr" x="16" y="26">Q0.0</text></g>
+            <path class="wire" data-wire="r3" d="M104 268H336M380 268H412"/>
+            <g class="coil" data-addr="Q0.2" data-kind="coil" transform="translate(336 268)"><path d="M0 0H6M38 0H44"/><path d="M12 -12A14 14 0 0 0 12 12M32 -12A14 14 0 0 1 32 12"/><text x="22" y="26" class="addr">H2 · Q0.2</text></g>
+          </svg>
+
+          <div class="sps-panel">
+            <div class="sps-buttons">
+              <button type="button" class="pb pb-start" data-input="I0.1"><span>S1</span>Start</button>
+              <button type="button" class="pb pb-stop" data-input="I0.0"><span>S0</span>Stopp</button>
+            </div>
+            <div class="sps-out">
+              <div class="motor" aria-hidden="true"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="17"/><g class="fan"><path d="M20 20 20 6M20 20 32 27M20 20 8 27"/></g><text x="20" y="24">M</text></svg></div>
+              <span class="lamp lamp-run" title="H1 Betrieb"></span><span class="lamp-l">H1</span>
+              <span class="lamp lamp-ready" title="H2 Bereit"></span><span class="lamp-l">H2</span>
+            </div>
+            <table class="pi" aria-label="Prozessabbild">
+              <tr><th>I0.0</th><th>I0.1</th><th>Q0.0</th><th>Q0.1</th><th>Q0.2</th></tr>
+              <tr><td data-img="I0.0">0</td><td data-img="I0.1">0</td><td data-img="Q0.0">0</td><td data-img="Q0.1">0</td><td data-img="Q0.2">0</td></tr>
+            </table>
+            <p class="sps-note">Zyklus 50 ms · <span data-cycles>0</span> Zyklen. S1 kurz drücken: Der Motor bleibt an, weil sich K1 über den eigenen Kontakt hält. S0 unterbricht – Stopp ist dominant.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="win" data-win="resistor" data-title="resistor — Farbcode" aria-label="Widerstands-Farbcode" data-lab="resistor">
+        <header class="win-bar"><span class="win-title">resistor — Farbcode</span><span class="win-btns"><button type="button" data-full aria-pressed="false" aria-label="Vollbild"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1 4V1h3M8 1h3v3M11 8v3H8M4 11H1V8"/></svg></button><button type="button" data-close aria-label="Fenster schließen"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 2l8 8M10 2l-8 8"/></svg></button></span></header>
+        <div class="win-body lab">
+          <svg class="resistor" viewBox="0 0 240 56" aria-hidden="true">
+            <path class="lead" d="M0 28H50M190 28H240"/>
+            <rect class="body" x="50" y="10" width="140" height="36" rx="16"/>
+            <rect data-band-svg x="74" y="10" width="11" height="36"/>
+            <rect data-band-svg x="97" y="10" width="11" height="36"/>
+            <rect data-band-svg x="120" y="10" width="11" height="36"/>
+            <rect data-band-svg x="160" y="10" width="11" height="36"/>
+          </svg>
+          <div class="bands">
+            <label>1. Ring<select data-band></select></label>
+            <label>2. Ring<select data-band></select></label>
+            <label>Multiplikator<select data-band></select></label>
+            <label>Toleranz<select data-band></select></label>
+          </div>
+          <p class="lab-out" data-r-out aria-live="polite"></p>
+          <label class="lab-in">oder Wert eingeben <input data-r-in placeholder="z. B. 4k7, 330, 2.2M" inputmode="text" autocomplete="off"></label>
+        </div>
+      </article>
+
+      <article class="win" data-win="ohm" data-title="ohm — U = R · I" aria-label="Rechner für das ohmsche Gesetz" data-lab="ohm">
+        <header class="win-bar"><span class="win-title">ohm — U = R · I</span><span class="win-btns"><button type="button" data-full aria-pressed="false" aria-label="Vollbild"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1 4V1h3M8 1h3v3M11 8v3H8M4 11H1V8"/></svg></button><button type="button" data-close aria-label="Fenster schließen"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 2l8 8M10 2l-8 8"/></svg></button></span></header>
+        <div class="win-body lab">
+          <svg class="circuit" viewBox="0 0 220 70" aria-hidden="true">
+            <path class="loop" d="M30 12H190V58H30Z"/>
+            <g data-flow class="flow"><path d="M30 12H190V58H30Z"/></g>
+            <g class="src"><circle cx="30" cy="35" r="12"/><path d="M24 35h12M30 29v12"/></g>
+            <rect class="r" x="92" y="4" width="36" height="16" rx="2"/>
+            <text x="110" y="34">R</text><text x="48" y="39">U</text>
+          </svg>
+          <div class="ohm-grid">
+            <label><span>U</span><input data-q="U" value="230" inputmode="decimal"><em>V</em></label>
+            <label><span>R</span><input data-q="R" value="1k" inputmode="text"><em>Ω</em></label>
+            <label><span>I</span><input data-q="I" inputmode="decimal"><em>A</em></label>
+            <label><span>P</span><input data-q="P" inputmode="decimal"><em>W</em></label>
+          </div>
+          <p class="lab-out ohm-out" data-ohm-msg aria-live="polite"></p>
+          <p class="lab-hint">Zwei Werte eintippen, die anderen rechnet die Seite aus.</p>
+        </div>
+      </article>
+
+      <article class="win" data-win="solar" data-title="pv — Sonnenstand Bad Radkersburg" aria-label="Sonnenstand und Photovoltaik" data-lab="solar">
+        <header class="win-bar"><span class="win-title">pv — Sonnenstand</span><span class="win-btns"><button type="button" data-full aria-pressed="false" aria-label="Vollbild"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1 4V1h3M8 1h3v3M11 8v3H8M4 11H1V8"/></svg></button><button type="button" data-close aria-label="Fenster schließen"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 2l8 8M10 2l-8 8"/></svg></button></span></header>
+        <div class="win-body lab">
+          <svg class="sun" viewBox="0 0 300 120" role="img" aria-label="Sonnenbahn heute">
+            <path class="horizon" d="M0 90H300"/>
+            <g class="hours"><path d="M75 86v8M150 86v8M225 86v8"/><text x="75" y="108">06</text><text x="150" y="108">12</text><text x="225" y="108">18</text></g>
+            <path class="sun-path" data-sun-path/>
+            <circle class="sun-dot" data-sun-dot r="6"/>
+          </svg>
+          <p class="lab-out sun-out" data-sun-out></p>
+        </div>
+      </article>
+    </section>
+
+    <!-- ================= 5 · kontakt ================= -->
+    <section class="ws" data-ws="5" data-ratios="0.55" aria-labelledby="ws5-h">
+      <h2 class="ws-h" id="ws5-h"><b>5</b> kontakt</h2>
+      <article class="win" data-win="mail" data-title="neomutt — neue Nachricht" aria-label="Nachricht schreiben">
+        <header class="win-bar"><span class="win-title">neomutt — neue Nachricht</span><span class="win-btns"><button type="button" data-full aria-pressed="false" aria-label="Vollbild"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1 4V1h3M8 1h3v3M11 8v3H8M4 11H1V8"/></svg></button><button type="button" data-close aria-label="Fenster schließen"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 2l8 8M10 2l-8 8"/></svg></button></span></header>
+        <form class="win-body mail" data-mail-form>
+          <p class="mail-row"><span>An:</span><span data-mail-to>…</span></p>
+          <label class="mail-row"><span>Von:</span><input name="from" autocomplete="name" placeholder="Ihr Name / Ihr Betrieb" required></label>
+          <label class="mail-row"><span>Betreff:</span><input name="subject" value="Website für meinen Betrieb" required></label>
+          <label class="mail-body"><span class="sr-only">Nachricht</span><textarea name="body" rows="7" required>Hallo David,
+
+wir sind … und bräuchten …</textarea></label>
+          <div class="mail-actions">
+            <button class="btn" type="submit">Im Mailprogramm öffnen</button>
+            <span class="c-muted small">Nichts wird über diese Seite verschickt – es öffnet sich Ihr eigenes Mailprogramm.</span>
+          </div>
+        </form>
+      </article>
+      <article class="win" data-win="offer" data-title="cat angebot.txt" aria-label="Was ich anbiete">
+        <header class="win-bar"><span class="win-title">cat angebot.txt</span><span class="win-btns"><button type="button" data-full aria-pressed="false" aria-label="Vollbild"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1 4V1h3M8 1h3v3M11 8v3H8M4 11H1V8"/></svg></button><button type="button" data-close aria-label="Fenster schließen"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 2l8 8M10 2l-8 8"/></svg></button></span></header>
+        <div class="win-body md">
+          <p class="md-h1"># Was ich für Ihren Betrieb mache</p>
+          <ul class="md-list offer">
+            <li><b>Neue Website</b> – schnell, fürs Handy gebaut, ohne Baukasten-Abo.</li>
+            <li><b>Alte Website auffrischen</b> – Design, Ladezeit, Öffnungszeiten, die stimmen.</li>
+            <li><b>Google-Unternehmensprofil</b> einrichten, damit Sie auf Maps gefunden werden.</li>
+            <li><b>Pflege</b> – Speisekarte, Preise und Fotos aktuell halten.</li>
+          </ul>
+          <p class="md-h2">## So läuft es ab</p>
+          <ol class="md-steps">
+            <li>Sie schreiben mir, was Ihr Betrieb braucht.</li>
+            <li>Ich schaue mir Ihre jetzige Seite und Ihr Google-Profil an und mache einen Vorschlag.</li>
+            <li>Sie bekommen einen Entwurf zum Anklicken, bevor etwas online geht.</li>
+            <li>Die Seite geht online – und ich zeige Ihnen, wie Sie Kleinigkeiten selbst ändern.</li>
+          </ol>
+          <p>Ich bin Schüler und arbeite neben der Schule. Dafür bekommen Sie jemanden aus der Region, der zurückruft und erklärt, was er tut.</p>
+          <p><a data-github href="#" target="_blank" rel="noopener">github.com/BugCraftAG ↗</a> · <a href="impressum.html">Impressum &amp; Datenschutz</a></p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- ================= Launcher (Alt+D) ================= -->
+  <dialog class="launcher" data-launcher aria-label="Launcher">
+    <input type="text" role="combobox" aria-expanded="true" aria-controls="launcher-list" aria-autocomplete="list" placeholder="Fenster oder Projekt öffnen …" autocomplete="off">
+    <ul id="launcher-list" role="listbox"></ul>
+  </dialog>
+
+  <p class="fatal" data-fatal hidden role="alert"></p>
+  <noscript><p class="fatal">Dieser Desktop braucht JavaScript. Die Projekte: <a href="https://bugcraftag.github.io/kante-barbier/">KANTE</a>, <a href="https://bugcraftag.github.io/tischlerei-demo/">Tischlerei Kogler</a>, <a href="https://bugcraftag.github.io/REST-DEMO-WEB/">Wirtshaus Rebenhof</a>.</p></noscript>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de-AT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Impressum &amp; Datenschutz – David Tomoiaga</title>
+  <meta name="robots" content="noindex">
+  <meta name="color-scheme" content="dark">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { overflow: auto; }
+    .legal { max-width: 760px; margin: 0 auto; padding: 48px 20px 80px; position: relative; z-index: 1; }
+    .legal h1 { color: var(--accent-2); font-size: 18px; margin-bottom: 20px; }
+    .legal h2 { color: var(--copper); font-size: 14px; margin: 28px 0 8px; }
+    .legal p { color: var(--fg-2); margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <main class="legal">
+    <p><a href="./">← cd ~</a></p>
+    <h1># Impressum</h1>
+    <p>Persönliche, nicht-kommerzielle Portfolio-Website (Offenlegung nach § 25 Mediengesetz).</p>
+    <h2>## Inhaber und Verantwortlicher</h2>
+    <p>David Tomoiaga, Bad Radkersburg, Österreich<br>
+       E-Mail: <span data-mail>über das Kontaktfenster auf der Startseite</span></p>
+    <h2>## Blattlinie</h2>
+    <p>Vorstellung meiner Ausbildung und meiner Projekte im Bereich Webentwicklung und Elektrotechnik.</p>
+
+    <h2 id="datenschutz">## Datenschutz</h2>
+    <p>Diese Seite setzt keine Cookies und verwendet keine Analyse- oder Tracking-Werkzeuge. Schriften und Bilder liegen auf demselben Server wie die Seite.</p>
+    <p><b>Hosting:</b> Die Seite wird über GitHub Pages (GitHub Inc., USA) ausgeliefert. Dabei verarbeitet GitHub technisch notwendige Zugriffsdaten wie die IP-Adresse.</p>
+    <p><b>Musik-Vorschau:</b> Erst wenn Sie im Musik-Fenster auf „Abspielen“ klicken, werden eine 30-Sekunden-Hörprobe und das Cover von Servern von Apple (audio-ssl.itunes.apple.com, is1-ssl.mzstatic.com) geladen. Dabei wird Ihre IP-Adresse an Apple übertragen. Ohne Klick passiert das nicht.</p>
+    <p><b>Lokaler Speicher:</b> Der Befehlsverlauf des Terminals wird nur in Ihrem Browser gespeichert (localStorage) und nie übertragen. Sie können ihn jederzeit über die Browser-Einstellungen löschen.</p>
+    <p><b>Kontakt:</b> Das Kontaktformular öffnet nur Ihr eigenes E-Mail-Programm; über diese Seite werden keine Daten verschickt.</p>
+    <p>Sie haben das Recht auf Auskunft, Berichtigung und Löschung Ihrer Daten sowie das Recht auf Beschwerde bei der österreichischen Datenschutzbehörde.</p>
+  </main>
+  <script type="module">
+    // E-Mail-Adresse aus der Datenquelle – steht nicht als Klartext im HTML
+    fetch("data/portfolio.json").then((r) => r.json()).then(({ profile: { email } }) => {
+      const a = document.createElement("a");
+      a.href = `mailto:${email.user}@${email.domain}`;
+      a.textContent = `${email.user}@${email.domain}`;
+      document.querySelector("[data-mail]").replaceChildren(a);
+    }).catch(() => {});
+  </script>
+</body>
+</html>

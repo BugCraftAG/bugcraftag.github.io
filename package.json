@@ -1,0 +1,19 @@
+{
+  "name": "bugcraftag.github.io",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portfolio von David Tomoiaga – ein Arch-Linux-Desktop im Browser",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p .",
+    "watch": "tsc -p . --watch",
+    "test": "tsc -p . && node --test \"dist/tests/*.test.js\"",
+    "start": "python3 -m http.server 8080"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.0"
+  },
+  "engines": { "node": ">=22" },
+  "license": "MIT"
+}
