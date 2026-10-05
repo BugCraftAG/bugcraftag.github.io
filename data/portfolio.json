@@ -1,0 +1,189 @@
+{
+  "profile": {
+    "name": "David Tomoiaga",
+    "handle": "david",
+    "host": "htl-brk",
+    "role": "Schüler · Webentwickler · angehender Elektrotechniker",
+    "school": "i:HTL Bad Radkersburg",
+    "department": "Elektrotechnik – IT, Automation & Energie",
+    "location": "Bad Radkersburg, Steiermark",
+    "tagline": "Ich baue schnelle, saubere Websites für kleine Betriebe in der Südsteiermark – und verstehe auch, was hinter der Steckdose passiert.",
+    "github": "https://github.com/BugCraftAG",
+    "email": {
+      "user": "david.tomoiaga",
+      "domain": "bulme.at"
+    },
+    "languages": [
+      {
+        "name": "Deutsch",
+        "level": null
+      },
+      {
+        "name": "Rumänisch",
+        "level": null
+      },
+      {
+        "name": "Englisch",
+        "level": "B1+"
+      }
+    ],
+    "interests": [
+      "Programmieren",
+      "Fitnessstudio",
+      "Design & Marketing",
+      "Elektronik"
+    ]
+  },
+  "projects": [
+    {
+      "id": "kante",
+      "file": "kante-barbier/",
+      "title": "KANTE – Barbier",
+      "kind": "Demo · Barbershop, Graz",
+      "summary": "Online-Terminbuchung mit echter Zeitplanung: freie Termine aus Schichten, Pausen und Buchungen berechnet, Kalender-Export, 19 Unit-Tests.",
+      "stack": [
+        "JavaScript (ES-Module)",
+        "CSS Cascade Layers",
+        "Node-Test-Runner",
+        "iCalendar"
+      ],
+      "url": "https://bugcraftag.github.io/kante-barbier/",
+      "repo": "https://github.com/BugCraftAG/kante-barbier",
+      "image": "images/projekt-kante.jpg",
+      "year": 2026
+    },
+    {
+      "id": "tischlerei",
+      "file": "tischlerei-kogler/",
+      "title": "Tischlerei Kogler",
+      "kind": "Demo · Tischlerei, Bad Radkersburg",
+      "summary": "Design wie eine technische Zeichnung, Tischrechner mit Live-Draufsicht, selbst generierte Holztexturen, keine Anfragen an fremde Server.",
+      "stack": [
+        "JavaScript",
+        "SVG",
+        "CSS",
+        "Python (Texturen)"
+      ],
+      "url": "https://bugcraftag.github.io/tischlerei-demo/",
+      "repo": "https://github.com/BugCraftAG/tischlerei-demo",
+      "image": "images/projekt-tischlerei.jpg",
+      "year": 2026
+    },
+    {
+      "id": "rebenhof",
+      "file": "wirtshaus-rebenhof/",
+      "title": "Wirtshaus Rebenhof",
+      "kind": "Demo · Gasthaus, Bad Radkersburg",
+      "summary": "Live-Öffnungsstatus nach österreichischer Zeit, Mittagsmenü, das automatisch beim heutigen Tag aufgeht.",
+      "stack": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "url": "https://bugcraftag.github.io/REST-DEMO-WEB/",
+      "repo": "https://github.com/BugCraftAG/REST-DEMO-WEB",
+      "image": "images/projekt-rebenhof.jpg",
+      "year": 2026
+    }
+  ],
+  "skills": [
+    {
+      "group": "Web",
+      "items": [
+        {
+          "name": "HTML",
+          "level": 3
+        },
+        {
+          "name": "CSS",
+          "level": 3
+        },
+        {
+          "name": "JavaScript",
+          "level": 2
+        },
+        {
+          "name": "TypeScript",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "group": "Programmierung",
+      "items": [
+        {
+          "name": "C",
+          "level": 2
+        },
+        {
+          "name": "C++",
+          "level": 2
+        },
+        {
+          "name": "Python",
+          "level": 2
+        },
+        {
+          "name": "Java",
+          "level": 1
+        },
+        {
+          "name": "MySQL",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "group": "Elektrotechnik",
+      "items": [
+        {
+          "name": "SPS-Programmierung",
+          "level": 2
+        },
+        {
+          "name": "Schaltungstechnik",
+          "level": 2
+        },
+        {
+          "name": "Messtechnik",
+          "level": 1
+        }
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "when": "seit 2024",
+      "what": "i:HTL Bad Radkersburg",
+      "detail": "Elektrotechnik mit Schwerpunkt IT, Automation und Energie"
+    },
+    {
+      "when": "2020 – 2024",
+      "what": "Mittelschule Bad Radkersburg",
+      "detail": ""
+    },
+    {
+      "when": "Praktikum",
+      "what": "JUFA Hotel Bad Radkersburg",
+      "detail": "Zwei Wochen Mitarbeit in der Gastronomie"
+    },
+    {
+      "when": "Schnuppern",
+      "what": "Autohaus Maitz",
+      "detail": "Drei Tage in der Werkstatt"
+    },
+    {
+      "when": "selbstständig",
+      "what": "Coding-Aufträge über Fiverr",
+      "detail": "Kleine Programmier- und Webaufträge für Kunden; Programmiersprachen u. a. mit codedex.com gelernt"
+    }
+  ],
+  "song": {
+    "title": "Meant To Be",
+    "artist": "Cuntsniffer & Broken Toy Airplanes",
+    "release": "2025",
+    "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b2/32/16/b2321656-76c1-9e8c-dafa-f705872ade05/mzaf_18010306069303515743.plus.aac.p.m4a",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/4b/79/f8/4b79f8aa-1f56-d2db-5b3c-50d0e1b9d2fc/cover_199955337085.jpg/300x300bb.jpg",
+    "link": "https://music.apple.com/at/album/1860539880?i=1860539881"
+  }
+}
